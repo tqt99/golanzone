@@ -7,7 +7,8 @@ import (
 	godiacritics "gopkg.in/Regis24GmbH/go-diacritics.v2"
 )
 
-// GetZone returns a timezone string from a city name and country code.
+// GetTimeZone returns the IANA Time Zone (TZ Database) identifier
+// for the specified city name and ISO 3166-1 alpha-2 country code.
 // If no match is found, the function returns "UTC".
 func GetZone(cityName, countryCode string) string {
 	cityName = strings.ToLower(strings.TrimSpace(godiacritics.Normalize((cityName))))
